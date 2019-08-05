@@ -1,0 +1,74 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url(../img/cozinha1.jpg);
+    background-size: cover;
+    background-position: 30% 48%;
+    animation: bganimation 5s;
+}
+@keyframes bganimation {
+	0%{background-position: 0% 48%;}
+	50%{background-position: 0% 55%;}
+	100%{background-position: 0% 48%;}
+}
+.container {
+	width: 100%;
+}
+/* botão voltar */
+i{
+	display: block;
+	margin: 10px;
+	color: #191919;
+	transition: 0.4s;
+	padding: 8px 2px;
+}
+i:hover {
+	color: #4d0d8f;
+	transform:scale(2);
+}
+.item i{
+	color: #191919;
+}
+.item i:hover, .item a:hover {
+	color: #4d0d8f;
+	transform:scale(2);
+}
+
+/* tabela */
+.topico tr{
+	background-color: #4d0d8f;
+}
+.topico th{
+	font-family: 'Abel';
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #faf6fb;
+}
+.item td{
+	font-family: 'Abel';
+	font-size: 15px;
+	color: #191919;
+}
+.item a{
+	color: #191919;
+}
+/* botão topo página */
+#topBtn{
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    background-color:  #4d0d8f; /* #065022 ; #a83755; #0a164a; #a83755; #693657; #271b29; #fab79c;  */
+    border-radius: 50%;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+#topBtn i{
+	margin: 0;
+	padding: 0;
+	color: white;
+}

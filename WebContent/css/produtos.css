@@ -1,0 +1,48 @@
+body {
+	font-family: 'Abel';
+}
+.display-4 {
+	font-size: 60px;
+	letter-spacing: 5px;
+	color: #4d0d8f;
+}
+.lead{
+	letter-spacing: 2px;
+	color: #633991;
+}
+.card-deck{
+	margin-left: 50px;
+}
+.btn {
+	border: 1px solid #4d0d8f;
+}
+.btn:hover {
+	background-color: #4d0d8f;
+	border: 1px solid #4d0d8f;
+}
+.btn-outline-primary {
+	color: #4d0d8f;
+}
+.btn-lg, .pricing-card-title {
+	color: #633991;
+}
+.font-weight-normal{
+	color: #4d0d8f;
+	text-transform: uppercase;
+}
+#li-destaque{
+	color: #633991;	
+}
+small{
+	font-family: 'Abel';
+	font-size: 15px;
+}
+.set{
+	font-size: 50px;
+	color: #4d0d8f;
+}
+@media(max-width: 640px) {
+	.card-deck{
+		margin-left: 0px;
+	}
+}

@@ -1,0 +1,117 @@
+/* cor placeholder */
+::placeholder{
+    color: #888;
+}
+
+/* corpo */
+body {
+    margin: 0;
+    padding: 0;
+   	background-image: url(../img/cozinha1.jpg);
+    background-size: cover;
+    background-position: 30% 48%;
+    animation: bganimation 5s;
+    text-rendering: optimizeLegibility;
+    font-family: 'Abel';
+    font-size: 16px;
+}
+@keyframes bganimation {
+	0%{background-position: 0% 48%;}
+	50%{background-position: 0% 55%;}
+	100%{background-position: 0% 48%;}
+}
+/* div total */
+.corpo{
+	width: 100%;
+}
+h1{
+	color: #4d0d8f;
+}
+label{
+	color: #633991;
+}
+/* div form */
+.container {
+	padding: 25px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* caixa form */
+.box{
+	border-radius: 8px;
+    background: #faf6fb;
+    padding: 25px;
+    margin: 0px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* inputs e animações */
+.box input[type="text"], .box input[type="email"],.box input[type="number"], .box select{
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin: 0 0 5px;
+    padding: 10px;
+    border-radius: 16px;
+}
+.box input[type="text"]:hover, .box input[type="email"]:hover, .box input[type="number"]:hover, .box select:hover{
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #4d0d8f;
+}
+.box input:focus{
+  outline: 0;
+  border: 1px solid #4d0d8f;
+}
+.box input[type="submit"]{
+    cursor: pointer;
+  	width: 100%;
+  	color: black;
+ 	border: none;
+  	background: #633991;
+ 	color: #fff;
+ 	margin: 0 0 5px;
+ 	padding: 10px;
+ 	font-size: 15px;
+  	border-radius: 16px;
+}
+#enviar{
+	color: #eeeff1;
+}
+.box input[type="submit"]:hover {
+    background: #4d0d8f;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* área do input */
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+/* botão voltar */
+a {
+	text-decoration: none;
+	color: #191919;
+}
+i {
+	position: absolute;
+	display: block;
+	margin: 12px;
+	color: #191919;
+	transition: 0.4s;
+	padding: 10px;
+}
+i:hover {
+	color: #4d0d8f;
+	transform:scale(2);
+}
