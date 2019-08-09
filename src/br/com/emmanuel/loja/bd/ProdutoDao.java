@@ -259,7 +259,7 @@ public class ProdutoDao {
 	public void altera(Produto produto) {
 		String sql = "update produtos set nome=?,tipo=?,preco=?,peso=?,altura=?,largura=?," +
 				"comprimento=?,alturaEmbalagem=?,larguraEmbalagem=?," +
-				"comprimentoEmbalagem=?,dataCadastro=? where idProduto=?";
+				"comprimentoEmbalagem=? where idProduto=?";
 		try {
 			
 			PreparedStatement stmt = con.prepareStatement(sql);
@@ -273,8 +273,7 @@ public class ProdutoDao {
 			stmt.setFloat(8, produto.getAlturaEmbalagem());
 			stmt.setFloat(9, produto.getLarguraEmbalagem());
 			stmt.setFloat(10, produto.getComprimentoEmbalagem());
-			stmt.setDate(11, new Date(produto.getDataCadastro().getTimeInMillis()));
-			stmt.setLong(12, produto.getIdProduto());
+			stmt.setLong(11, produto.getIdProduto());
 			
 			stmt.execute();
 			stmt.close();

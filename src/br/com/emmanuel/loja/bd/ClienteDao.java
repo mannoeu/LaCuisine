@@ -226,7 +226,7 @@ public class ClienteDao {
 	 */
 	public void altera(Cliente cliente) {
 		String sql = "update clientes set nome=?, cpf=?, email=?, nomeMae=?,"
-				+ "dataNascimento=?,dataCadastro=?,cep=?,estado=?, cidade=?, bairro=?, logradouro=?, "
+				+ "dataNascimento=?,cep=?,estado=?, cidade=?, bairro=?, logradouro=?, "
 				+ "numero=? where idCliente=?";
 		try {
 
@@ -237,15 +237,13 @@ public class ClienteDao {
 			stmt.setString(4, cliente.getNomeMae());
 			stmt.setDate(5, new Date(cliente.getDataNascimento()
 					.getTimeInMillis()));
-			stmt.setDate(6, new Date(cliente.getDataCadastro()
-					.getTimeInMillis()));
-			stmt.setString(7, cliente.getCep());
-			stmt.setString(8, cliente.getEstado());
-			stmt.setString(9, cliente.getCidade());
-			stmt.setString(10, cliente.getBairro());
-			stmt.setString(11, cliente.getLogradouro());
-			stmt.setString(12, cliente.getNumero());
-			stmt.setLong(13, cliente.getIdCliente());
+			stmt.setString(6, cliente.getCep());
+			stmt.setString(7, cliente.getEstado());
+			stmt.setString(8, cliente.getCidade());
+			stmt.setString(9, cliente.getBairro());
+			stmt.setString(10, cliente.getLogradouro());
+			stmt.setString(11, cliente.getNumero());
+			stmt.setLong(12, cliente.getIdCliente());
 
 			stmt.execute();
 			stmt.close();

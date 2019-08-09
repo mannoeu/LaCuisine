@@ -33,8 +33,6 @@ public class AlteraClienteServlet extends HttpServlet {
 		String nomeMae = request.getParameter("nomeMae");
 		Calendar dataNascimento = null;
 		String dataEmTexto = request.getParameter("dataNascimento");
-		Calendar dataCadastro = null;
-		String dataEmTexto2 = request.getParameter("dataCadastro");
 		String cep = request.getParameter("cep");
 		String estado = request.getParameter("estado");
 		String cidade = request.getParameter("cidade");
@@ -46,10 +44,6 @@ public class AlteraClienteServlet extends HttpServlet {
 			Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
 			dataNascimento = Calendar.getInstance();
 			dataNascimento.setTime(date);
-			
-			Date date2 = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto2);
-			dataCadastro = Calendar.getInstance();
-			dataCadastro.setTime(date2);
 		} catch (ParseException e) {
 			out.println("Erro de conversão da data");
 			return;
@@ -61,7 +55,6 @@ public class AlteraClienteServlet extends HttpServlet {
 		cliente.setEmail(email);
 		cliente.setNomeMae(nomeMae);
 		cliente.setDataNascimento(dataNascimento);
-		cliente.setDataCadastro(dataCadastro);
 		cliente.setCep(cep);
 		cliente.setEstado(estado);
 		cliente.setCidade(cidade);

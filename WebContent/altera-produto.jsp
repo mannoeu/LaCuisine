@@ -78,7 +78,6 @@ import="java.text.SimpleDateFormat"%>
         	<fieldset>
         	<input type="text" name="comprimentoEmbalagem" id="comprimentoEmbalagem" required="true" value="<%=p.getComprimentoEmbalagem()%>"/>
         	</fieldset>
-        	<input type="text" hidden="true" name="dataCadastro" readonly="true" id="dataCadastro" value="<%=sdt.format(p.getDataCadastro().getTime())%>"/> 
     		<input id="enviar" type="submit" value="Salvar"/>
 	</form>
    </div>

@@ -33,10 +33,6 @@ public class AlteraProdutoServlet extends HttpServlet {
 		String alturaEmbalagem = request.getParameter("alturaEmbalagem");
 		String larguraEmbalagem = request.getParameter("larguraEmbalagem");
 		String comprimentoEmbalagem = request.getParameter("comprimentoEmbalagem");
-		Calendar dataCadastro = null;
-		Date date = new Date(System.currentTimeMillis());
-		dataCadastro = Calendar.getInstance();
-		dataCadastro.setTime(date);
 
 		Produto produto = new Produto();
 		
@@ -51,7 +47,6 @@ public class AlteraProdutoServlet extends HttpServlet {
 		produto.setAlturaEmbalagem(Float.parseFloat(alturaEmbalagem));
 		produto.setLarguraEmbalagem(Float.parseFloat(larguraEmbalagem));
 		produto.setComprimentoEmbalagem(Float.parseFloat(comprimentoEmbalagem));
-		produto.setDataCadastro(dataCadastro);
 
 		ProdutoDao dao = new ProdutoDao();
 		dao.altera(produto);

@@ -46,7 +46,6 @@ import="java.text.SimpleDateFormat"%>
         	<fieldset>
         	<input type="text" name="dataNascimento" id="dataNascimento" required="true" onkeypress="mascaraData(this, event)" maxlength="10" value="<%=sdt.format(c.getDataNascimento().getTime())%>"/>
        	 	</fieldset>
-        	<input type="text" hidden="true" name="dataCadastro" readonly="true" id="dataCadastro" value="<%=sdt.format(c.getDataCadastro().getTime())%>"/> 
 			<label for="cep">CEP:</label>
         	<fieldset>
         	<input type="text" name="cep" id="cep" maxlength="8" onkeypress="fMasc(this,mCEP)" required="true" value="<%=c.getCep()%>"/>
