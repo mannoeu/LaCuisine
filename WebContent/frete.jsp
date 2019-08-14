@@ -44,14 +44,14 @@ java.text.DecimalFormat"%>
             <h4 class="my-0 font-weight-normal"><%=produto.getNome()%></h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title"><%=produto.getPreco()%> R$<small class="text-muted">/und</small></h1>
+            <h1 class="card-title pricing-card-title">R$ <%=produto.getPreco()%><small class="text-muted">/und</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li id="li-destaque"><strong>Informações do Produto</strong></li>
               	<li>Id: <%=produto.getIdProduto()%></li>
 	            <li>Peso: <%=produto.getPeso()%> Kg</li>
 	            <li>Volume do produto: <%=df.format(produto.getVolumeProduto())%> cm³</li>
-	            <li>Frete Estimado: <%=df.format(produto.getFrete())%> R$</li>
-	            <li>Total: <%=df.format(produto.getValorTotal())%> R$</li>
+	            <li>Frete Estimado: R$ <%=df.format(produto.getFrete())%></li>
+	            <li>Total: R$ <%=df.format(produto.getValorTotal())%></li>
             </ul>
           </div>
         </div>

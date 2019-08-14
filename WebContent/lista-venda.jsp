@@ -45,8 +45,8 @@ import="java.text.SimpleDateFormat"%>
             <h4 class="my-0 font-weight-normal">Venda Id : <%=venda.getIdVenda()%></h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">Nomedocliente <small hidden class="text-muted"><%=venda.getIdCliente()%></small></h1>
-            <h1 class="card-title pricing-card-title">Nomedovendedor<small hidden class="text-muted"><%=venda.getIdVendedor()%></small></h1>
+            <h1 class="card-title pricing-card-title">Cliente: <%=venda.getIdCliente()%></h1>
+            <h1 class="card-title pricing-card-title">Vendedor: <%=venda.getIdVendedor()%></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li id="li-destaque"><strong>Informações dos Produtos</strong></li>
               <%
@@ -58,10 +58,7 @@ import="java.text.SimpleDateFormat"%>
 	           <li>Data de validade: <%=sdt.format(venda.getDataValidade().getTime())%></li>
 	           <li>Número de segurança: <%=venda.getCvvCartao()%></li>
               <% 
-              }
-              %>
-              <%
-              	if(venda.getFormaPagamento().equals("dinheiro")){
+              }else	{
               %>
              	<li>Valor pago à vista: <%=venda.getDinheiro()%> R$</li>
               <%
